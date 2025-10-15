@@ -1,6 +1,22 @@
 # rtl8723bu
 Driver for Realtek RTL8723BU Wireless Adapter with Hardware ID `0bda:b720`
 
+# useful with some devices like the cheap EDUP brand:
+
+![Alt text](https://raw.githubusercontent.com/leitzzz/rtl8723bu/refs/heads/master/edup_device_tested1.png "Optional title text")
+
+# Tested in a rasbperry pi 2, that doesnt have wireless by default:
+
+Followed steps:
+
+* git clone https://github.com/lwfinger/rtl8723bu.git
+* cd rtl8723bu
+* nano Makefile   (here edit to comment the line that has EXTRA_CFLAGS += -DCONFIG_CONCURRENT_MODE)
+* sudo make
+* sudo make install
+* sudo modprobe -v 8723bu
+
+
 # How to use?
 ## Get the source first.
 Get it from Github repository with the following command in the Linux terminal.
